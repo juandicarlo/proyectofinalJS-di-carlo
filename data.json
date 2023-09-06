@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "nombre": "Fernet Branca 750cc",
+        "precio": 3499.00
+    },
+    {
+        "id": 2,
+        "nombre": "Arroz Gallo Oro",
+        "precio": 459.00
+    },
+    {
+        "id": 3,
+        "nombre": "Galletitas Diversion",
+        "precio": 379.00
+    },
+    {
+        "id": 4,
+        "nombre": "Cerveza Patagonia",
+        "precio": 319.00
+    },
+    {
+        "id": 5,
+        "nombre": "Desodorante Musk Axe 150ml",
+        "precio": 349.00
+    },
+    {
+        "id": 6,
+        "nombre": "Leche Veronica 1L",
+        "precio": 429.00
+    },
+    {
+        "id": 7,
+        "nombre": "Yerba Mate PLayadito",
+        "precio": 1799.00
+    },
+    {
+        "id": 8,
+        "nombre": "Aceite Lira 900ml",
+        "precio": 1399.00
+    },
+    {
+        "id": 9,
+        "nombre": "Asado de novillito xKg",
+        "precio": 2499.00
+    },    
+    {
+        "id": 10,
+        "nombre": "Gaseosa Coca-Cola 1500ml",
+        "precio": 569.00
+    },
+    {
+        "id": 11,
+        "nombre": "Papel Higienico Campanita XL",
+        "precio": 479.00
+    },
+    {
+        "id": 12,
+        "nombre": "Whisky Red Label Johnnie Walker 750Cc",
+        "precio": 9599.00
+    }
+]
