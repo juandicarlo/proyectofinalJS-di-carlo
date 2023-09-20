@@ -118,9 +118,9 @@ header h1{
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    margin: 5px; /* Espacio entre los botones */
+    margin: 5px; 
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Transición de color al pasar el mouse */
+    transition: background-color 0.3s ease; 
 }
 
 /* Estilo para el botón activo */
@@ -132,18 +132,127 @@ header h1{
 .contenedor-botones button:hover {
     background-color: #0056b3;
 }
-.carrito{
+
+.contenedor{
+    max-width: 1200px;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    contain: paint;
+}
+.contenedor .contenedor-items{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap:30px;
+    grid-row-gap: 30px;
+    width: 100%;
+    transition: .3s;
+}
+.contenedor .contenedor-items .item{
+    max-width: 200px;
+    margin: auto;
+    height: 350px;
+    border: 1px solid #666;
+    border-radius: 10px;
+    padding: 20px;
+    transition: .3s;
+}
+.contenedor .contenedor-items .item .img-item{
+    width: 100%;
+}
+.contenedor .contenedor-items .item:hover{
+    box-shadow: 0 0 10px #666;
+    scale: 1.05;
+}
+.contenedor .contenedor-items .item .titulo-item{
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+.contenedor .contenedor-items .item .precio-item{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.contenedor .contenedor-items .item .boton-item{
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background-color: black;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.filtro-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#filtroCategoria {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#btnFiltrar {
+    background-color: #0b0c0c;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#btnFiltrar:hover {
+    background-color: #0056b3;
+}
+.contenedor-botones {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilos para los botones */
+.contenedor-botones button {
+    background-color: #0b0c0c;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+/* Estilo para el botón activo */
+.contenedor-botones button.active {
+    background-color: #0056b3;
+}
+
+/* Cambio de color al pasar el mouse */
+.contenedor-botones button:hover {
+    background-color: #0056b3;
+}
+.carrito {
     border: 1px solid #666;
     width: 35%;
-    margin-top: 30px;
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: auto;
-    position: sticky !important;
-    top: 0;
+    position: fixed;
+    top: 10px;
+    right: 10px;
     transition: .3s;
-    margin-right: -100%;
-    opacity: 0;
+    background-color: white;
+    max-height: 80vh; 
+    overflow-y: auto; 
 }
 .carrito .header-carrito{
     background-color: #000;
@@ -176,7 +285,7 @@ header h1{
     font-size: 18px;
     background-color: transparent;
     display: inline-block;
-    width:30px;
+    width:20px;
     padding: 5px;
     text-align: center;
 }
@@ -247,6 +356,65 @@ header h1{
 .carrito-total .btn-pagar:hover{
     scale: 1.05;
 }
+.item {
+    border: 1px solid #ddd; 
+    padding: 10px; 
+    text-align: center; 
+    background-color: #f9f9f9; 
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); 
+    border-radius: 5px; 
+    transition: transform 0.2s ease; 
+  }
+  
+  .item:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); 
+  }
+  
+  .img-item {
+    max-width: 100%; 
+    height: auto; 
+  }
+  
+  .precio-item {
+    font-weight: bold; 
+    color: #333; 
+    margin-top: 10px; 
+  }
+  
+  .boton-item {
+    background-color: #007bff; 
+    color: #fff; 
+    border: none; 
+    padding: 8px 16px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.2s ease; 
+  }
+  
+  .boton-item:hover {
+    background-color: #0056b3; 
+  }
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .fila {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .item {
+    max-width: calc(20% - 20px); 
+  }
+  
+  .espacio-blanco {
+    width: calc(20% - 20px); 
+  }
 
 @media screen and (max-width: 850px) {
     .contenedor {

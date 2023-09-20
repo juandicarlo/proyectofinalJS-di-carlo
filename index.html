@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js" async></script>
-    <script src="style.css"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
     <title>Supermercado "La vuelta" </title>
 </head>
 <body>
@@ -19,85 +18,20 @@
         <button id="btnFiltrar">Filtrar</button>
     </div>
     <div class="contenedor-botones">
-        <button id="ordenarMayor">Ordenar por precio (Mayor a Menor)</button>
-        <button id="ordenarMenor">Ordenar por precio (Menor a Mayor)</button>
+        <button id="ordenarMayor">Ordenar por Mayor Precio</button>
+        <button id="ordenarMenor">Ordenar por Menor Precio</button>
     </div>
-    <section class="contenedor">
+    <div class="contenedor">
         <div class="contenedor-items">
-            <div class="item" data-nombre="Fernet Branca 750cc">
-                <span class="titulo-item">Fernet Branca 750cc</span>
-                <img src="img/fernet.jpg" alt="" class="img-item">
-                <span class="precio-item">$3499</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-nombre="Arroz Gallo oro">
-                <span class="titulo-item">Arroz Gallo Oro</span>
-                <img src="img/arroz.jpg" alt="" class="img-item">
-                <span class="precio-item">$459</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-nombre="Galletitas Diversion">
-                <span class="titulo-item">Galletitas Diversion</span>
-                <img src="img/galletitas.jpg" alt="" class="img-item">
-                <span class="precio-item">$379</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-nombre="Cerveza Patagonia">
-                <span class="titulo-item">Cerveza Patagonia 24.7 410cc</span>
-                <img src="img/cerveza.jpg" alt="" class="img-item">
-                <span class="precio-item">$319</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-nombre="Desodorante Musk Axe">
-                <span class="titulo-item">Desodorante Musk Axe 150ml</span>
-                <img src="img/desodorante.jpg" alt="" class="img-item">
-                <span class="precio-item">$349</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-nombre="Leche Veronica">
-                <span class="titulo-item">Leche Veronica 1L</span>
-                <img src="img/leche.jpg" alt="" class="img-item">
-                <span class="precio-item">$429</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-nombre="Yerba Mate Playadito">
-                <span class="titulo-item">Yerba Mate PLayadito</span>
-                <img src="img/yerba.jpg" alt="" class="img-item">
-                <span class="precio-item">$1799</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-nombre="Aceite Lira">
-                <span class="titulo-item">Aceite Lira 900ml</span>
-                <img src="img/aceite.jpg" alt="" class="img-item">
-                <span class="precio-item">$1399</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-nombre="Asado de novillito">
-                <span class="titulo-item">Asado de novillito xKg</span>
-                <img src="img/asado.jpg" alt="" class="img-item">
-                <span class="precio-item">$2499</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-nombre="Gaseosa Coca-Cola">
-                <span class="titulo-item">Gaseosa Coca-Cola 1500ml</span>
-                <img src="img/cocacola.jpg" alt="" class="img-item">
-                <span class="precio-item">$569</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-nombre="Papel higienico Campanita">
-                <span class="titulo-item">Papel Higienico Campanita XL</span>
-                <img src="img/papelhigienico.jpg" alt="" class="img-item">
-                <span class="precio-item">479</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-nombre="Whisky Red Label Johnnie Walker 750Cc">
-                <span class="titulo-item">Whisky Red Label Johnnie Walker 750Cc</span>
-                <img src="img/whisky.jpg" alt="" class="img-item">
-                <span class="precio-item">$9599</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-
+        <div class="fila">
+          <!-- Aquí van los primeros 5 productos -->
         </div>
+        <div class="fila">
+          <!-- Aquí van los siguientes 5 productos -->
+        </div>
+        <!-- Repite esto para todas las filas de productos -->
+      </div>
+    </div>
         <!-- Carrito de Compras -->
         <div class="carrito" id="carrito">
             <div class="header-carrito">
@@ -111,12 +45,16 @@
                 <div class="fila">
                     <strong>Tu Total</strong>
                     <span class="carrito-precio-total">
-                        $120.000,00
+                        
                     </span>
                 </div>
                 <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
             </div>
         </div>
     </section>
+    <script src="app.js"></script> 
+    <script src="style.css"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="sweetalert2.js"></script>
 </body>
 </html>
